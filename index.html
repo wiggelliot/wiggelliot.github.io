@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5PPXL887');</script>
-    <!-- End Google Tag Manager -->
+    })(window,document,'script','dataLayer','GTM-5PPXL887');
+  </script>
+  <!-- End Google Tag Manager -->
+  
   <meta charset="UTF-8">
-  <title>Bright Mind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elliot Wigg</title>
+
   <style>
     body {
       margin: 0;
@@ -20,11 +25,11 @@
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 20px;
       position: relative;
-      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent över bakgrund */
     }
 
     .menu-toggle {
@@ -40,18 +45,19 @@
     .logo {
       font-size: 28px;
       font-weight: bold;
-      text-align: center;
-      width: 100%;
-      pointer-events: none; /* så loggan inte blockeras av menyn */
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     nav {
       display: none;
       flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.8);
       position: absolute;
       top: 70px;
       left: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
       padding: 10px;
       border-radius: 8px;
     }
@@ -87,42 +93,35 @@
         margin-left: 20px;
       }
 
+      header {
+        justify-content: space-between;
+      }
+
       .logo {
-        position: static;
-        width: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
-  </style></head>
+  </style>
+</head>
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PPXL887"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="logo">BRIGHT MIND</div>
+    <div class="logo">Elliot Wigg</div>
     <nav id="main-nav">
       <a href="#start">Start</a>
       <a href="#om">Om</a>
       <a href="#kontakt">Kontakt</a>
-    </nav>    <nav>
-      <ul>
-        <li><a href="#start">Start</a></li>
-        <li><a href="#om">Om</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
     </nav>
-  </header>  
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PPXL887"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <main>
-      <h1 id="start">Välkommen!</h1>
-      <p>Det här är ett exempel med hamburgarmeny till vänster och logga i mitten.</p>
-    </main>
-  <h1>Hej världen 👋</h1>
-  <p>Det här är min första sida på GitHub Pages!</p>
-  <script>
-    function toggleMenu() {
-      document.getElementById("main-nav").classList.toggle("active");
-    }
-  </script>
-</body>
-</html>
+  </header>
+
+  <main>
+    <h1 id="start">Välkommen!</h1>
+    <p>Det här
