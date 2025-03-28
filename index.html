@@ -9,12 +9,99 @@
     })(window,document,'script','dataLayer','GTM-5PPXL887');</script>
     <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
-  <title>Min sida</title>
-</head>
+  <title>Bright Mind</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('din-bakgrundsbild.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent över bakgrund */
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      pointer-events: none; /* så loggan inte blockeras av menyn */
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 0;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media(min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      nav {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+      }
+
+      nav a {
+        margin-left: 20px;
+      }
+
+      .logo {
+        position: static;
+        width: auto;
+      }
+    }
+  </style></head>
 <body>
   <header>
-    <h1>Min Webbsida</h1>
-    <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="logo">BRIGHT MIND</div>
+    <nav id="main-nav">
+      <a href="#start">Start</a>
+      <a href="#om">Om</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>    <nav>
       <ul>
         <li><a href="#start">Start</a></li>
         <li><a href="#om">Om</a></li>
@@ -26,7 +113,16 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PPXL887"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <main>
+      <h1 id="start">Välkommen!</h1>
+      <p>Det här är ett exempel med hamburgarmeny till vänster och logga i mitten.</p>
+    </main>
   <h1>Hej världen 👋</h1>
   <p>Det här är min första sida på GitHub Pages!</p>
+  <script>
+    function toggleMenu() {
+      document.getElementById("main-nav").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
